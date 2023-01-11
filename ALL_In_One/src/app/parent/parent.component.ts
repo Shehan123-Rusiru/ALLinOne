@@ -1,5 +1,6 @@
 import { Component, ViewChild,AfterViewInit } from '@angular/core';
 import { ViewChildComponent } from '../view-child/view-child.component'; 
+import { ServiceDataService } from '../service-data.service';
 @Component({
   selector: 'app-parent',
   templateUrl: './parent.component.html',
@@ -7,8 +8,11 @@ import { ViewChildComponent } from '../view-child/view-child.component';
 })
 export class ParentComponent {
 
-  constructor(){
+  constructor(private data: ServiceDataService){
 
+  }
+  clickEvent() {
+    this.data.clickEvent()
   }
   
   public MyName = "";
@@ -16,6 +20,7 @@ export class ParentComponent {
   
   showItems(newName: any){
      this.NewName = newName;
+  
    }
 
   @ViewChild(ViewChildComponent)
@@ -26,4 +31,5 @@ export class ParentComponent {
        decrease() {
               this.numberComponent.decreaseByOne();
        }
+     
 }
