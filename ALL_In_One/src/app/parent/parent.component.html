@@ -1,0 +1,26 @@
+<h2>
+    Parent to Child
+</h2>
+
+<div class="container">
+    <div class="row">
+
+
+        <input type="text" #name style="width:300px" />
+        <button (click)="MyName = name.value">Add</button>
+
+    </div>
+</div>
+
+<app-child [name]="MyName" (newNameEvent)="showItems($event)"></app-child>
+
+<br>
+<br>
+
+<div class="container">
+    <div class="row">
+        My Name : {{NewName}}
+    </div>
+</div>
+<app-child1 (newNameEvent)="showItems($event)"></app-child1>
+  

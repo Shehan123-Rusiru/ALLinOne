@@ -1,0 +1,16 @@
+<h2>
+    My Name : {{name}}
+</h2>
+
+<h3>
+    Child to Parent
+</h3>
+<div class="container">
+    <div class="row">
+
+
+        <input type="text" #newName1 style="width:300px" />
+        <button (click)="addItem(newName1.value)">Add</button>
+
+    </div>
+</div>
