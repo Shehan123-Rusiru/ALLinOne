@@ -24,3 +24,10 @@
 </div>
 <app-child1 (newNameEvent)="showItems($event)"></app-child1>
   
+<h3>ViewChild using Component</h3>
+
+<button type="button" (click)="increase()">Increase</button>
+<button type="button" (click)="decrease()">Decrease</button>
+<br/><br/>
+
+<app-view-child ></app-view-child>
